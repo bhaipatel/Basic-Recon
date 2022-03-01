@@ -7,6 +7,6 @@ while read line; do
         ~go/bin/./assetfinder --subs-only $line | tee -a $line.txt		
         sort -u $line.txt -o $line.txt        
         echo "Subjack"
-        subjack -w $line.txt -t 1000 -o $1takeover.txt
+        ~/go/bin/./subjack -w $line.txt -t 1000 -o $1takeover.txt
 done < $filename
 #./sudomainTakeover.sh subs.txt

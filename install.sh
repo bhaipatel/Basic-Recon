@@ -14,6 +14,13 @@ go get github.com/tomnomnom/waybackurls
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go get -u github.com/tomnomnom/assetfinder
+git clone https://github.com/orwagodfather/WordList.git
+git clone https://github.com/six2dez/OneListForAll.git
+go install github.com/ffuf/ffuf@latest
+mv WordList wordlist
+mv OneListForAll/*.txt -r wordlist
+
+
 
 
 

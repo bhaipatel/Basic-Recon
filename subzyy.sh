@@ -15,7 +15,7 @@ curl -s "https://jldc.me/anubis/subdomains/"$line | grep -Po "((http|https):\/\/
 curl -s "https://crt.sh/?q=%25."$line"&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' |tee $line.txt
 ~/go/bin/./amass enum -d $line -passive|tee $line.txt 
         
-} &> /dev/nul
+} &> /dev/null
 
 
 
@@ -24,7 +24,7 @@ sort -u $line.txt -o $line.txt
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Probbing Subdomains For $line \e[0m\n";
       
 
- cat $line.txt | ~/go/bin/./httpx -t 5000 -o $list.txt &> /dev/nul
+ cat $line.txt | ~/go/bin/./httpx -t 5000 -o $list.txt &> /dev/null
         
         echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Scaning for Subdomain takeover For $line \e[0m\n";
        

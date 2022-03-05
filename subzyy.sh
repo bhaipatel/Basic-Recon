@@ -24,7 +24,7 @@ sort -u $line.txt -o $line.txt
 echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Probbing Subdomains For $line \e[0m\n";
       
 
- cat $line.txt | ~/go/bin/./httpx -t 5000 -o $list.txt
+ cat $line.txt | ~/go/bin/./httpx -t 5000 -o $list.txt &> /dev/nul
         
         echo -e "\n\e[36m[\e[32m+\e[36m]\e[92m Scaning for Subdomain takeover For $line \e[0m\n";
        
